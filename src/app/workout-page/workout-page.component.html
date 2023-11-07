@@ -1,0 +1,26 @@
+<app-nav-bar (onOpen)="updateView($event)"></app-nav-bar>
+<section>
+    <h1 class="workout-directions">Select up to 5 muscles to generate your own workout</h1>
+    <div class='selection-alert' *ngIf="formError">
+        <h3>{{ formError }} </h3>
+    </div>
+    <div class="checkbox-container" *ngIf="!menuOpen">
+        <form class="checkbox-form" [formGroup]="workoutForm" (ngSubmit)="generateWorkout()">
+            <div class="checkbox" *ngFor="let muscle of muscleList">
+                <label>{{ muscle }}<input class="chockbox-input" type="checkbox" formControlName="muscles" name="muscle" value="muscle" (change)="updateSelection($event, muscle)">
+                </label>
+            </div>
+            <div class="workout-btn-container">
+                <button class="workout-btn" type="submit">Generate Workout</button>
+            </div>
+        </form>
+    </div>
+    <div class="card-flex" *ngIf="exerciseList">
+        <div class="exercise-card" *ngFor="let exercise of exerciseList" (click)="viewDetails(exercise)">
+            <app-exercise-display [exercise]="exercise" class="card-deck"></app-exercise-display>
+        </div>
+    </div>
+    <div>
+        <button class="clear-btn" type="button" (click)="clearWorkout()">Clear List</button>
+    </div>
+</section>
