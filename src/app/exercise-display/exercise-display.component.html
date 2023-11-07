@@ -1,0 +1,19 @@
+<div class="exercise-title">
+    <h1>{{ exercise.name }}</h1>
+</div>
+<h3>Difficulty</h3>
+<div class="exercise-difficulty">
+    <div class="solid-stars" *ngFor="let stars of exerciseStars">
+        <fa-icon [icon]="solidStar"></fa-icon>
+    </div>
+    <div class="empty-stars" *ngFor="let stars of totalStars">
+        <fa-icon [icon]="emptyStar"></fa-icon>
+    </div>
+</div>
+<div class="exercise-muscles">
+    <h2> Target Muscle: </h2>
+    <h3> {{ exercise.tgtMuscle }} </h3>
+    <h4> Secondary Muscle: </h4>
+    <h5> {{ exercise.secMuscle }} </h5>
+</div>
+

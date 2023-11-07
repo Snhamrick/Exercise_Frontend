@@ -1,1 +1,512 @@
-/* You can add global styles to this file, and also import other style files */
+//import breakpoints
+@import './stylesBreakpoints.scss';
+
+
+//Color Variables
+
+$secondary: #272f9f;
+$primary: #677dbb;
+$accent: #aeaaaa;
+$alert: #b20000;
+$text: #ffffff;
+$secAccent: #cc0066;
+
+
+//mixins
+
+@mixin primary-button {
+    background-color: $secondary;
+    border: 1px solid $accent;
+    border-radius: 5px;
+    color: $text;
+    font-weight: bold;
+    height: 40px;
+    width: fit-content;
+}
+
+@mixin alert-fail {
+    border: 1px solid $accent;
+    border-radius: 5px;
+    background: $alert;
+    color: $text;
+    height: 35px;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+}
+
+@mixin btn-action {
+    box-shadow: 7px 6px 28px 1px rgba(0,0,0,0.2);
+    transform: translateY(4px);
+}
+
+
+//Globals
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Apple Chancery, cursive;
+    background-color: $primary;
+}
+
+section {
+    background-size: cover;
+    text-align: center;
+    align-content: center;
+    width: 100%;
+    height: calc(100vh - 80px);
+}
+
+
+//Navbar
+
+nav {
+    background: $secondary;
+    height: 80px;
+    max-width: 100%;
+    margin: auto;
+}
+
+
+span.logo {
+    color: $text;
+    line-height: 80px;
+    font-size: 25px;
+    font-weight: bold;
+    margin-left: 8px;
+
+    @include lg {
+
+        font-size: 30px;
+    }
+
+    @include smMax {
+        display: none;
+    }
+}
+
+nav ul {
+    float: right;
+    margin-right: 50px;
+
+    @include mdMax {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        text-align: center;
+        left: -100%;
+        top: 80px;
+        background-color: $accent;
+        transition: all .5s;
+    }
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 10px;
+
+    @include mdMax {
+        display: block;
+    }
+}
+
+nav ul li a {
+    color: $text;
+    font-size: 17px;
+    text-transform: uppercase;
+}
+
+a:hover {
+    cursor: pointer;
+    color: $secAccent;
+
+    @include mdMax {
+        color: $secondary;
+    }
+}
+
+#toggle {
+    display: none;
+}
+
+#toggle:checked ~ ul {
+    left: 0;
+}
+
+.toggle {
+    font-size: 30px;
+    color: $text;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+
+    @include md {
+        display: none;
+    }
+}
+
+.toggle:hover {
+    color: $secAccent;
+}
+
+
+//homepage
+
+
+//musclemap
+
+.tooltip .tooltiptext {
+    position: absolute;
+    width: fit-content;
+    text-align: center;
+    padding: 1rem 1rem;
+    background-color: $text;
+    color: $secondary;
+    font-size: 15px;
+    visibility: hidden;
+    top: -1rem;
+    left: 50%;
+    transform: translateX(-40%) translateY(400%);
+
+    @include mdMax {
+        font-size: 8px;
+    }
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+area:hover {
+    cursor: pointer;
+}
+
+//endMusclemap
+
+.home {
+    width: 100%;
+}
+.flex {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    width: 100%;
+
+}
+
+.flex > div {
+    line-height: 50px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: $text;
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+}
+
+.notFound-alert {
+    @include alert-fail;
+    height: 100px;
+
+    h3 {
+        transform: translateY(-15%);
+     }
+}
+
+.row {
+    width: 100%;
+}
+
+
+label {
+    font-size: 20px;
+    color: $secondary;
+}
+
+input[type=text] {
+    width: 70%;
+    height: 40px;
+    border: 2px solid $secondary;
+    border-radius: 5px;
+    color: $secondary;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+input[type=text]:focus {
+    outline: none;
+    border: 3px solid $accent;
+}
+
+
+.search-btn {
+   @include primary-button;
+   padding-left: 10px;
+   padding-right: 10px;
+   margin-left: 10px;
+}
+
+.search-btn:hover {
+    cursor: pointer;
+ }
+
+ .search-btn:active {
+    @include btn-action();
+ }
+
+.home-photo {
+    margin-left: auto;
+    margin-right: auto;
+    @include mdMax {
+        display: none;
+    }
+}
+
+.muscle-map {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    border: 2px solid $accent;
+    position: relative;
+    transform: translateY(-5%);
+
+    @include lg {
+        width: 60%;
+        height: 60%;
+    }
+}
+
+.return-btn {
+  @include primary-button;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.return-btn:hover {
+    cursor: pointer;
+}
+
+//ExerciseDisplay
+
+.exercise-card {
+    width: 20%;
+    height: 300px;
+    margin: 15px;
+    border: 2px solid $secAccent;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px 0 rgba(0,0,0,0.5);
+    transition: 0.3s;
+    background-color: $secondary;
+    color: $text;
+
+    @include lgMax {
+        width: 60%;
+    }
+}
+
+.exercise-card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    background-color: $accent;
+    color: $secondary;
+    cursor: pointer;
+}
+
+.exercise-title {
+    margin-top: 8px;
+    margin-bottom: 10px;
+}
+
+.exercise-difficulty {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+
+    .solid-stars {
+        color: $secAccent;
+    }
+}
+
+.exercise-muscles {
+    h2 {
+        font-size: 20px;
+    }
+    h3 {
+        margin-bottom: 20px;
+    }
+}
+
+//Exercise Page
+
+.card-flex {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: left;
+    align-items: center;
+    margin: 50px 0;
+
+    @include lgMax {
+        width: 80%;
+        justify-content: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+//Exercise Details
+
+.exercise-details {
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    align-content: center;
+    color: $text;
+}
+
+.exercise-name {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    h1 {
+        font-size: 30px;
+        color: $secondary;
+        text-decoration: underline;
+    }
+}
+
+.muscle-info {
+    margin-bottom: 20px;
+    h2 {
+        font-size: 20px;
+    }
+
+    h3 {
+        font-size: 17px;
+    }
+
+}
+
+.muscle {
+    display: inline;
+    line-height: 30px;
+    margin-right: 15px;
+}
+
+.exercise-description {
+    width: 50%;
+    margin: auto;
+}
+
+.vid-container {
+    padding-bottom: 100px;
+}
+
+.exercise-video {
+    border: 1px solid $secondary;
+    width: 60%;
+    height: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+
+    @include lg {
+        height: 600px;
+    }
+
+    @include smMax {
+        height: 300px;
+    }
+}
+
+//Workouts Page
+
+.workout-directions {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: $text;
+}
+
+.selection-alert {
+    @include alert-fail();
+
+    height: 80px;
+}
+
+.checkbox-container {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    justify-content: center;
+    place-items: center;
+    border: 2px solid $accent;
+}
+
+.checkbox-form {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 30% 30% 30%;
+
+    label {
+        color: $text;
+    }
+}
+
+.checkbox {
+    margin: 15px;
+}
+
+input[type=checkbox], input[type=checkbox]:hover {
+    transform: scale(1.5);
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.checkbox input[type=checkbox]:checked {
+    accent-color: $secondary;
+}
+
+.workout-btn-container {
+    grid-column: 2;
+}
+
+.workout-btn {
+    margin-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    @include primary-button();
+}
+
+.workout-btn:hover {
+    cursor: pointer;
+}
+
+.workout-btn:active {
+    @include btn-action();
+}
+
+.clear-btn {
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 20px;
+    @include primary-button();
+}
+
+.clear-btn:hover {
+    cursor: pointer;
+}
+
+.clear-btn:active {
+    @include btn-action();
+}

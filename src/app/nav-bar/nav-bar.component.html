@@ -1,0 +1,15 @@
+<nav>
+    <input type="checkbox" id="toggle" [(ngModel)]="menuOpen" (change)="openMenu()">
+    <label for="toggle">
+        <fa-icon class="toggle" [icon]="faBars"></fa-icon>
+    </label>
+    <span class="logo">Exercise Database <fa-icon [icon]="faDumbbell"></fa-icon></span>
+    <ul>
+        <li><a class="active" href="">Home</a></li>
+        <li><a href="exercises">Exercises</a></li>
+        <li><a href="workouts">Workouts</a></li>
+    </ul>
+</nav>
+
+
+

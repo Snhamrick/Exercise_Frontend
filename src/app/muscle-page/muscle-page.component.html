@@ -1,0 +1,10 @@
+<app-nav-bar></app-nav-bar>
+<section>
+    <div class="yes-muscle">
+        <div class="card-flex">
+            <div class="exercise-card" *ngFor="let exercise of exerciseList" (click)="viewDetails(exercise)">
+                <app-exercise-display [exercise]="exercise"></app-exercise-display>
+            </div>
+        </div>
+    </div>
+</section>
