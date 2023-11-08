@@ -15,6 +15,7 @@ import { ExerciseDetailsComponent } from './exercise-details/exercise-details.co
 import { MusclePageComponent } from './muscle-page/muscle-page.component';
 import { WorkoutPageComponent } from './workout-page/workout-page.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { DisclaimerComponent } from './disclaimer/disclaimer.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     ExerciseDisplayComponent,
     ExerciseDetailsComponent,
     MusclePageComponent,
-    WorkoutPageComponent
+    WorkoutPageComponent,
+    DisclaimerComponent
   ],
   imports: [
     BrowserModule,

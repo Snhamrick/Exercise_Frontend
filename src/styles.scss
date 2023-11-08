@@ -520,3 +520,26 @@ input[type=checkbox], input[type=checkbox]:hover {
 .clear-btn:active {
     @include btn-action();
 }
+
+//disclaimer
+
+.disclaimer-container {
+    margin-top: 100px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid $accent;
+    padding: 20px 20px;
+}
+
+.disclaimer {
+    color: $text;
+
+    p {
+        font-size: 10px;
+    }
+
+    h1, h2 {
+        font-size: 20px;
+    }
+}
