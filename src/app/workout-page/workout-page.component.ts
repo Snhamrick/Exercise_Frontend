@@ -54,7 +54,9 @@ export class WorkoutPageComponent implements OnInit {
       if (!this.exerciseList) {
         this.exerciseList = [];
       }
-      this.cleanUrl(this.exerciseList);
+      if (this.exerciseList.length > 0) {
+        this.cleanUrl(this.exerciseList);
+      }
   }
 
   updateSelection(event: any, muscle: string) {

@@ -2,13 +2,13 @@
     <map name="anatomy-map">
         <div class="tooltip">
             <span class="tooltiptext">Abdominals</span>
-            <area shape="rect" coords="142,192,203,290" href="Abs">
+            <area shape="rect" coords="142,192,203,290" (click)="exercise('Abdominals')">
         </div>
         <div class="tooltip">
-            <area shape="poly" coords="147,115,112,107,92,127,87,153,92,160,115,131" href="Delts">
-            <area shape="poly" coords="233,108,250,123,257,139,256,164,230,132,196,115" href="Delts">
-            <area shape="poly" coords="615,187,588,172,568,138,600,130,612,142" href="Delts">
-            <area shape="poly" coords="453,143,468,129,502,142,484,166,452,185" href="Delts">
+            <area shape="poly" coords="147,115,112,107,92,127,87,153,92,160,115,131" (click)="exercise('Deltoids')">
+            <area shape="poly" coords="233,108,250,123,257,139,256,164,230,132,196,115" (click)="exercise('Deltoids')">
+            <area shape="poly" coords="615,187,588,172,568,138,600,130,612,142" (click)="exercise('Deltoids')">
+            <area shape="poly" coords="453,143,468,129,502,142,484,166,452,185" (click)="exercise('Deltoids')">
             <span class="tooltiptext">Deltoids</span>
         </div>
         <div class="tooltip">
@@ -17,8 +17,8 @@
             <span class="tooltiptext">Pectoralis Major</span>
         </div>
         <div class="tooltip">
-            <area shape="poly" coords="81,219,89,159,110,158,105,193" href="Bis">
-            <area shape="poly" coords="263,218,139,187,133,161,251,160,263,186" href="Bis">
+            <area shape="poly" coords="81,219,89,159,110,158,105,193" (click)="exercise('Biceps Brachii')">
+            <area shape="poly" coords="263,218,139,187,133,161,251,160,263,186" (click)="exercise('Biceps Brachii')">
             <span class="tooltiptext">Bicep Brachialis</span>
         </div>
         <div class="tooltip">
@@ -29,15 +29,15 @@
             <span class="tooltiptext">Trapezius</span>
         </div>
         <div class="tooltip">
-            <area shape="poly" coords="129,296,170,372,160,407,134,395,117,336" href="Quads">
-            <area shape="poly" coords="215,298,177,367,184,407,210,401,227,343" href="Quads">
+            <area shape="poly" coords="129,296,170,372,160,407,134,395,117,336" (click)="exercise('Quadriceps')">
+            <area shape="poly" coords="215,298,177,367,184,407,210,401,227,343" (click)="exercise('Quadriceps')">
             <span class="tooltiptext">Quadriceps</span>
         </div>
         <div class="tooltip">
-            <area shape="poly" coords="65,214,47,285,63,298,88,248,84,228,79,197" href="forearms">
-            <area shape="poly" coords="285,303,252,236,269,198,284,228,300,293" href="forearms">
-            <area shape="poly" coords="439,310,425,304,448,231,469,245" href="forearms">
-            <area shape="poly" coords="626,304,594,250,616,229,640,298" href="forearms">
+            <area shape="poly" coords="65,214,47,285,63,298,88,248,84,228,79,197" (click)="exercise('Forearms')">
+            <area shape="poly" coords="285,303,252,236,269,198,284,228,300,293" (click)="exercise('Forearms')">
+            <area shape="poly" coords="439,310,425,304,448,231,469,245" (click)="exercise('Forearms')">
+            <area shape="poly" coords="626,304,594,250,616,229,640,298" (click)="exercise('Forearms')">
             <span class="tooltiptext">Forearms</span>
         </div>
         <div class="tooltip">
@@ -46,23 +46,23 @@
             <span class="tooltiptext">Latissimus Dorsi</span>
         </div>
         <div class="tooltip">
-            <area shape="poly" coords="479,288,485,340,528,316,528,290,510,264,487,262" href="Glutes">
-            <area shape="poly" coords="584,282,581,264,561,260,536,290,535,313,579,341,585,312" href="Glutes">
+            <area shape="poly" coords="479,288,485,340,528,316,528,290,510,264,487,262" (click)="exercise('Gluteus Maximus')">
+            <area shape="poly" coords="584,282,581,264,561,260,536,290,535,313,579,341,585,312" (click)="exercise('Gluteus Maximus')">
             <span class="tooltiptext">Glutes</span>
         </div>
         <div class="tooltip">
-            <area shape="poly" coords="490,340,527,317,523,399,495,399" href="hamstrings">
-            <area shape="poly" coords="579,343,536,316,545,399,568,399" href="Hamstrings">
+            <area shape="poly" coords="490,340,527,317,523,399,495,399" (click)="exercise('Hamstrings')">
+            <area shape="poly" coords="579,343,536,316,545,399,568,399" (click)="exercise('Hamstrings')">
             <span class="tooltiptext">Hamstrings</span>
         </div>
         <div class="tooltip">
-            <area shape="rect" coords="490,400,532,479" href="calves">
-            <area shape="rect" coords="537,399,576,480" href="calves">
+            <area shape="rect" coords="490,400,532,479" (click)="exercise('Calves')">
+            <area shape="rect" coords="537,399,576,480" (click)="exercise('Calves')">
             <span class="tooltiptext">Calves</span>
         </div>
         <div class="tooltip">
-            <area shape="poly" coords="465,178,481,171,475,226,455,235,446,191" href="triceps">
-            <area shape="poly" coords="617,190,587,171,589,221,601,243,615,224" href="triceps">
+            <area shape="poly" coords="465,178,481,171,475,226,455,235,446,191" (click)="exercise('Triceps Brachii')">
+            <area shape="poly" coords="617,190,587,171,589,221,601,243,615,224" (click)="exercise('Triceps Brachii')">
             <span class="tooltiptext">Triceps</span>
         </div>
     </map>

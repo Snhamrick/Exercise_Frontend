@@ -158,8 +158,9 @@ a:hover {
 }
 
 
-//homepage
 
+
+//HomePage
 
 //musclemap
 
@@ -354,7 +355,7 @@ input[type=text]:focus {
     width: 100%;
     justify-content: left;
     align-items: center;
-    margin: 50px 0;
+    margin: 50px;
 
     @include lgMax {
         width: 80%;
@@ -400,6 +401,14 @@ input[type=text]:focus {
     display: inline;
     line-height: 30px;
     margin-right: 15px;
+
+    @include mdMax {
+        display: block;
+    }
+}
+
+.exercise-variations {
+    margin-bottom: 30px;
 }
 
 .exercise-description {
@@ -499,6 +508,7 @@ input[type=checkbox], input[type=checkbox]:hover {
 .clear-btn {
     padding-left: 10px;
     padding-right: 10px;
+    margin-top: 20px;
     margin-bottom: 20px;
     @include primary-button();
 }
