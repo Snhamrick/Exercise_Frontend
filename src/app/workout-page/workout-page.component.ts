@@ -27,6 +27,7 @@ export class WorkoutPageComponent implements OnInit {
     "Cardio",
     "Deltoids",
     "Forearms",
+    "Gluteus Maximus",
     "Hamstrings",
     "Latissimus Dorsi",
     "Pectoralis Major",

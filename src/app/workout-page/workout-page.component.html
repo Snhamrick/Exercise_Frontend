@@ -11,12 +11,16 @@
                 </label>
             </div>
             <div class="workout-btn-container">
-                <button class="workout-btn" type="submit">Generate Workout</button>
-                <button class="clear-btn" type="button" (click)="clearWorkout()">Clear List</button>
+                <div>
+                    <button class="workout-btn" type="submit">Generate Workout</button>
+                </div>
+                <div>
+                    <button class="clear-btn" type="button" (click)="clearWorkout()">Clear List</button>
+                </div>
             </div>
         </form>
     </div>
-    <div class="card-flex" *ngIf="exerciseList.length > 0">
+    <div class="workoutCard-flex" *ngIf="exerciseList.length > 0">
         <div class="exercise-card" *ngFor="let exercise of exerciseList" (click)="viewDetails(exercise)">
             <app-exercise-display [exercise]="exercise" class="card-deck"></app-exercise-display>
         </div>

@@ -60,7 +60,7 @@ section {
     text-align: center;
     align-content: center;
     width: 100%;
-    height: calc(100vh - 80px);
+    min-height: calc(100vh - 80px);
 }
 
 
@@ -164,6 +164,10 @@ a:hover {
 
 //musclemap
 
+.map-photo {
+    height: 90%;
+}
+
 .tooltip .tooltiptext {
     position: absolute;
     width: fit-content;
@@ -191,14 +195,11 @@ area:hover {
 }
 
 //endMusclemap
-
-.home {
-    width: 100%;
-}
 .flex {
     display: flex;
     justify-content: space-between;
     margin-top: 10px;
+    margin-bottom: 20px;
     width: 100%;
 
 }
@@ -273,18 +274,25 @@ input[type=text]:focus {
     }
 }
 
+.map-directions {
+    color: $text;
+}
+
 .muscle-map {
-    width: 80%;
+    width: 70%;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 20px;
+    margin-top: 100px;
     border: 2px solid $accent;
     position: relative;
     transform: translateY(-5%);
 
     @include lg {
-        width: 60%;
-        height: 60%;
+        width: 50%;
+    }
+
+    @include lgMax {
+        margin-top: 50px;
     }
 }
 
@@ -310,6 +318,10 @@ input[type=text]:focus {
     transition: 0.3s;
     background-color: $secondary;
     color: $text;
+
+    @include md {
+        height: 350px;
+    }
 
     @include lgMax {
         width: 60%;
@@ -352,10 +364,10 @@ input[type=text]:focus {
 .card-flex {
     display: flex;
     flex-wrap: wrap;
-    width: 100%;
-    justify-content: left;
-    align-items: center;
-    margin: 50px;
+    width: 80%;
+    justify-content: space-between;
+    align-content: flex-start;
+    margin: 50px auto;
 
     @include lgMax {
         width: 80%;
@@ -364,7 +376,6 @@ input[type=text]:focus {
         margin-right: auto;
     }
 }
-
 //Exercise Details
 
 .exercise-details {
@@ -487,7 +498,9 @@ input[type=checkbox], input[type=checkbox]:hover {
 }
 
 .workout-btn-container {
+    display: block;
     grid-column: 2;
+    grid-row: 6;
 }
 
 .workout-btn {
@@ -521,13 +534,29 @@ input[type=checkbox], input[type=checkbox]:hover {
     @include btn-action();
 }
 
+.workoutCard-flex {
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    justify-content: left;
+    margin: 50px auto;
+
+    @include lgMax {
+        width: 80%;
+        justify-content: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
 //disclaimer
 
 .disclaimer-container {
     margin-top: 100px;
-    width: 90%;
-    margin-left: auto;
     margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 50px;
+    width: 90%;
     border: 1px solid $accent;
     padding: 20px 20px;
 }

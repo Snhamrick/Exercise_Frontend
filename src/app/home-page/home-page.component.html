@@ -1,33 +1,33 @@
 <app-nav-bar></app-nav-bar>
 <section>
-    <div class="home">
-        <div class='flex'>
-            <div class="home-photo">
-                <img src="../../assets/dumbbells.jpg" alt="dumbbells">
-            </div>
-            <div class="title">
-                <h3>Find the exercise your looking for to start sculpting your body today!</h3>
-                <div class='notFound-alert' *ngIf="formError">
-                    <h3> {{ formError }} </h3>
-                </div>
-                <form class="search-form" #searchForm="ngForm" (ngSubmit)="searchExercise()">
-                <div class='row'>
-                    <label for="search">Search for exercise by name:</label>
-                </div>
-                <div class="row">
-                    <input [(ngModel)]="search" class="search-input" name="search" type="text" id="search" required>
-                    <button class="search-btn" type="submit" [disabled]="!searchForm.valid">Search</button>
-                </div>
-                </form>
-                <h4>Select target muscle below</h4>
-            </div>
-            <div class="home-photo">
-                <img src="../../assets/dumbbells.jpg" alt="dumbbells">
-            </div>
+    <div class='flex'>
+        <div class="home-photo">
+            <img src="../../assets/dumbbells.jpg" alt="dumbbells">
         </div>
-        <div class="muscle-map">
-            <app-muscle-map></app-muscle-map>
+        <div class="title">
+            <h3>Find the exercise your looking for to start sculpting your body today!</h3>
+            <div class='notFound-alert' *ngIf="formError">
+                <h3> {{ formError }} </h3>
+            </div>
+            <form class="search-form" #searchForm="ngForm" (ngSubmit)="searchExercise()">
+            <div class='row'>
+                <label for="search">Search for exercise by name:</label>
+            </div>
+            <div class="row">
+                <input [(ngModel)]="search" class="search-input" name="search" type="text" id="search" required>
+                <button class="search-btn" type="submit" [disabled]="!searchForm.valid">Search</button>
+            </div>
+            </form>
         </div>
+        <div class="home-photo">
+            <img src="../../assets/dumbbells.jpg" alt="dumbbells">
+        </div>
+    </div>
+    <div class="map-directions">
+        <h3>Select Target Muscle Below</h3>
+    </div>
+    <div class="muscle-map">
+        <app-muscle-map></app-muscle-map>
     </div>
     <div class="disclaimer-container">
         <app-disclaimer></app-disclaimer>
